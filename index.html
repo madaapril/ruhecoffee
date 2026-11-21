@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ruhe Coffee</title>
+    <link rel="icon" type="image/png" href="img/logo-transparan.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <img
+          src="img/logo-transparan.png"
+          alt="Ruhe Coffee Logo"
+          class="nav-logo"
+        />
+        <span class="nav-title">Ruhe Coffee</span>
+      </div>
+      <button class="cart-toggle" id="cartToggle" aria-label="Buka keranjang">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="22"
+          height="22"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <circle cx="9" cy="21" r="1" />
+          <circle cx="20" cy="21" r="1" />
+          <path
+            d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+          />
+        </svg>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </button>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="hero-tagline">Pre-Order via WhatsApp</p>
+        <h1 class="hero-title">Nikmati Kopi<br />Terbaik Kami</h1>
+        <p class="hero-desc">
+          Pilih menu favoritmu, tambahkan ke keranjang, dan kami siapkan
+          pesananmu dengan penuh cinta.
+        </p>
+        <a href="#menu" class="btn-primary">Lihat Menu</a>
+      </div>
+    </section>
+
+    <!-- MENU SECTION -->
+    <section class="menu-section" id="menu">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Daftar Menu</h2>
+          <p class="section-subtitle">
+            Semua minuman dibuat segar saat pesanan masuk
+          </p>
+        </div>
+        <div class="menu-grid" id="menuGrid">
+          <!-- Menu cards rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contact">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <img
+            src="img/logo-transparan.png"
+            alt="Ruhe Coffee"
+            class="footer-logo"
+          />
+          <span class="footer-name">Ruhe Coffee</span>
+        </div>
+        <div class="footer-links">
+          <a
+            href="https://instagram.com/ruhecoffee.id"
+            target="_blank"
+            rel="noopener"
+            class="footer-ig"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+            @ruhecoffee.id
+          </a>
+        </div>
+        <div class="footer-map">
+          <iframe
+            src="https://maps.google.com/maps?q=-7.865169,112.039844&z=16&output=embed"
+            width="100%"
+            height="220"
+            style="border: 0; border-radius: 12px"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Lokasi Ruhe Coffee"
+          >
+          </iframe>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Ruhe Coffee. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- CART SIDEBAR -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-sidebar" id="cartSidebar">
+      <div class="cart-header">
+        <h3>Keranjang</h3>
+        <button class="cart-close" id="cartClose" aria-label="Tutup keranjang">
+          &times;
+        </button>
+      </div>
+      <div class="cart-body" id="cartBody">
+        <p class="cart-empty">Keranjang masih kosong.</p>
+      </div>
+      <div class="cart-footer" id="cartFooter">
+        <div class="cart-total-row">
+          <span>Total</span>
+          <span class="cart-total" id="cartTotal">Rp 0</span>
+        </div>
+        <button class="btn-clear" id="btnClear">Kosongkan</button>
+        <button class="btn-checkout" id="btnCheckout">
+          Checkout via WhatsApp
+        </button>
+      </div>
+    </aside>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
